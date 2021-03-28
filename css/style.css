@@ -201,12 +201,13 @@ img {
   margin-right: auto;
   text-align: center;
   background-image: linear-gradient(
-      rgba(79, 84, 136, 0.4),
-      rgba(47, 48, 58, 0.4)
+      rgba(47, 48, 58, 40%),
+      rgba(47, 48, 58, 40%)
     ),
     url(../image/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 1600px;
 }
 .hero-title {
   margin: auto;
@@ -292,7 +293,6 @@ img {
 }
 .emp-list-item {
   position: relative;
-  text-align: center;
 }
 .employ {
   padding-bottom: 94px;
@@ -308,10 +308,6 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
 }
-.overlay-wrapper {
-  position: relative;
-  width: 100%;
-}
 .overlay {
   position: absolute;
   bottom: 0;
@@ -326,6 +322,12 @@ img {
   text-transform: uppercase;
   color: #ffffff;
   background: rgba(47, 48, 58, 0.8);
+}
+.overley-text {
+  position: relative;
+  width: 100%;
+  display: flex;
+  text-align: center;
 }
 /*кОМАНДА*/
 .team-section {
@@ -411,10 +413,6 @@ img {
 .team-icon {
   fill: currentColor;
 }
-.icon-item-link:hover .team-icon,
-.icon-item-link:focus .team-icon {
-  fill: #ffffff;
-}
 .icon-item-link:hover,
 .icon-item-link:focus {
   background-color: #2196f3;
@@ -454,7 +452,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .partners-link:hover,
 .partners-link:focus {
@@ -554,7 +552,7 @@ img {
   align-items: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-footer-item:not(:last-child) {
   margin-right: 10px;
@@ -608,8 +606,7 @@ img {
   border: 1px solid transparent;
   padding: 6px 22px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .novigation-button-link:hover,
 .novigation-button-link:focus {
@@ -699,13 +696,16 @@ img {
   letter-spacing: 0.03em;
   color: #ffffff;
   transform: translateY(100%);
-  opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  opacity: 1;
 }
 .img-card-link :hover .card-overley,
 .img-card-link :focus .card-overley {
   transform: translateY(0%);
   opacity: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 /*модальное окно*/
