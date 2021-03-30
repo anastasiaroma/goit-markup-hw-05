@@ -408,7 +408,7 @@ img {
   align-items: center;
   border-radius: 50%;
   color: #afb1b8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-icon {
   fill: currentColor;
@@ -606,7 +606,7 @@ img {
   border: 1px solid transparent;
   padding: 6px 22px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .novigation-button-link:hover,
 .novigation-button-link:focus {
